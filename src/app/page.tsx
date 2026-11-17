@@ -1,18 +1,20 @@
 import { Game } from "@/components/game";
+import { CatIcon, DogIcon } from "@/components/pets";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col items-center gap-8 bg-gradient-to-br from-blue-50 to-red-50 px-4 py-10">
-      <header className="text-center">
-        <h1 className="text-3xl font-bold text-slate-900">Tic-Tac-Toe</h1>
-        <p className="mt-2 text-sm text-slate-600">
-          Challenge your friends in this classic game!
+    <main className="flex flex-1 flex-col items-center gap-5 px-4 py-6 sm:py-8">
+      <header className="flex flex-col items-center gap-2 text-center">
+        <h1 className="flex items-center gap-3 font-display text-5xl leading-none text-cream [text-shadow:0_3px_0_var(--ink),0_-3px_0_var(--ink),3px_0_0_var(--ink),-3px_0_0_var(--ink),2px_2px_0_var(--ink),-2px_-2px_0_var(--ink),2px_-2px_0_var(--ink),-2px_2px_0_var(--ink)] sm:text-6xl">
+          <CatIcon className="size-12 sm:size-16" />
+          <span>vs</span>
+          <DogIcon className="size-12 sm:size-16" />
+        </h1>
+        <p className="text-lg font-semibold text-ink">
+          Tic-Tac-Toe. Three in a row wins the yard.
         </p>
       </header>
       <Game />
-      <p className="text-xs text-slate-500">
-        Built with React 19, Next.js, Tailwind CSS, and shadcn/ui
-      </p>
     </main>
   );
 }
